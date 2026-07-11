@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    Title/description below are a static fallback for the split-second before
+    JS runs (and for crawlers/social previews). Renderer.js should update
+    document.title and this meta tag from meta.siteName / meta.seoDescription
+    in data/portfolio.default.json once data loads, so there is one source of
+    truth at runtime even though this line exists here too.
+  -->
+  <title>محمود عبدالوهاب — Technical Support Specialist</title>
+  <meta name="description" content="بورتفوليو محمود عبدالوهاب، Technical Support Specialist متخصص في WhatsApp Business API وأتمتة الدعم بالذكاء الاصطناعي، وصاحب مشروع مدعوم." />
+
+  <link rel="stylesheet" href="src/css/tokens.css" />
+  <link rel="stylesheet" href="src/css/base.css" />
+  <link rel="stylesheet" href="src/css/layout.css" />
+  <link rel="stylesheet" href="src/css/components.css" />
+  <link rel="stylesheet" href="src/css/sections.css" />
+</head>
+<body>
+
+  <noscript>
+    <div class="noscript-banner">
+      <p>هذا الموقع يحتاج JavaScript ليعمل بشكل صحيح. من فضلك فعّل JavaScript في متصفحك.</p>
+    </div>
+  </noscript>
+
+  <div id="scroll-progress"></div>
+
+  <!--
+    #app is the sole Renderer mount point. No section markup lives here in
+    HTML — every section (Navbar, Hero, About, Experience, Skills, Projects,
+    Education, Contact, Footer) is rendered into this element from
+    data/portfolio.default.json / localStorage by src/js/app.js once the
+    Renderer and components exist. Keeping this shell empty is intentional:
+    it avoids any content duplication between HTML and the JSON data source.
+  -->
+  <div id="app" aria-live="polite"></div>
+
+  <!-- SVG icon sprite: loaded once, referenced everywhere via <use href="assets/sprite.svg#icon-name">. -->
+  <div id="sprite-mount" hidden aria-hidden="true"></div>
+
+  <script type="module" src="src/js/app.js"></script>
+</body>
+</html>

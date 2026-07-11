@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Admin — طبقة التحرير فقط. لا يُحمَّل هذا الملف إلا داخل admin.html،
+   ولا يؤثر بأي شكل على شكل index.html العام.
+   ========================================================================== */
+
+body.is-admin-mode{ padding-top:52px; } /* مساحة لشريط الإدارة الثابت أعلى الصفحة */
+
+/* ---------- غلاف أي عنصر قابل للتحرير ---------- */
+.editable{ position:relative; outline:1px dashed transparent; outline-offset:6px; transition:outline-color var(--dur-fast) ease; border-radius:var(--radius-sm); }
+.editable:hover, .editable:focus-within{ outline-color:rgba(77,163,255,.45); }
+
+.edit-btn{
+  position:absolute; top:-14px; inset-inline-end:-14px; z-index:5;
+  width:32px; height:32px; border-radius:50%;
+  background:linear-gradient(135deg, var(--accent), var(--primary)); color:#fff;
+  display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm);
+  opacity:0; transform:scale(.8); pointer-events:none;
+  transition:opacity var(--dur-fast) ease, transform var(--dur-fast) var(--ease-bounce);
+}
+.editable:hover .edit-btn, .editable:focus-within .edit-btn{ opacity:1; transform:scale(1); pointer-events:auto; }
+.edit-btn svg{ width:14px; height:14px; }
+
+/* ---------- عناصر داخل قوائم قابلة لإعادة الترتيب (مهارات/مشاريع/خبرات/Timeline) ---------- */
+.editable-item{ position:relative; }
+.editable-item .item-toolbar{
+  position:absolute; top:.4rem; inset-inline-end:.4rem; z-index:5;
+  display:flex; gap:.3rem; opacity:0; transform:translateY(-4px);
+  transition:opacity var(--dur-fast) ease, transform var(--dur-fast) ease;
+}
+.editable-item:hover .item-toolbar, .editable-item:focus-within .item-toolbar{ opacity:1; transform:translateY(0); }
+.item-toolbar button{
+  width:26px; height:26px; border-radius:50%; background:var(--bg-elevated); border:1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center; color:var(--text-2);
+}
+.item-toolbar button:hover{ color:var(--text-1); border-color:var(--accent-soft); }
+.item-toolbar button.action-delete:hover{ color:var(--danger); border-color:var(--danger); }
+.item-toolbar svg{ width:13px; height:13px; }
+
+.add-item-btn{
+  display:flex; align-items:center; justify-content:center; gap:.4rem; width:100%;
+  border:1px dashed var(--glass-border); border-radius:var(--radius-md); padding:.75rem;
+  color:var(--text-3); font-size:.82rem; font-weight:700;
+  transition:border-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+.add-item-btn:hover{ border-color:var(--accent-soft); color:var(--accent-soft); }
+.add-item-btn svg{ width:15px; height:15px; }
+
+/* ---------- حالات السحب والإفلات ---------- */
+.sortable-dragging{ opacity:.35; }
+.sortable-placeholder{ border:1px dashed var(--accent-soft); border-radius:var(--radius-md); background:rgba(77,163,255,.06); }
+
+/* ---------- شريط الإدارة الثابت ---------- */
+.admin-toolbar{
+  position:fixed; top:0; inset-inline:0; z-index:calc(var(--z-nav) + 20); height:52px;
+  display:flex; align-items:center; justify-content:space-between; gap:var(--space-sm);
+  padding-inline:var(--pad-inline);
+  background:var(--scrim-strong); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--glass-border); font-size:.82rem;
+}
+.admin-toolbar .toolbar-group{ display:flex; align-items:center; gap:.4rem; }
+.admin-toolbar .toolbar-btn{
+  width:32px; height:32px; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;
+  color:var(--text-2); border:1px solid transparent;
+}
+.admin-toolbar .toolbar-btn:hover{ background:var(--glass); color:var(--text-1); }
+.admin-toolbar .toolbar-btn:disabled{ opacity:.35; }
+.admin-toolbar .toolbar-btn svg{ width:16px; height:16px; }
+.admin-toolbar .autosave-indicator{ display:flex; align-items:center; gap:.4rem; color:var(--text-3); font-size:.75rem; }
+.admin-toolbar .autosave-indicator .dot{ width:6px; height:6px; border-radius:50%; background:var(--success); }
+.admin-toolbar .source-badge{ font-size:.7rem; color:var(--text-3); }
+.admin-toolbar input[type="file"]{ display:none; }
+
+@media (max-width:700px){
+  .admin-toolbar{ font-size:.72rem; }
+  .admin-toolbar .autosave-indicator span:not(.dot){ display:none; }
+}

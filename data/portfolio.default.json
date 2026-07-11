@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "siteName": "محمود عبدالوهاب",
+    "tagline": "Technical Support Specialist — وباني منتجات SaaS تعتمد على الذكاء الاصطناعي",
+    "language": "ar",
+    "direction": "rtl",
+    "themeDefault": "dark",
+    "seoDescription": "بورتفوليو محمود عبدالوهاب، Technical Support Specialist متخصص في WhatsApp Business API وأتمتة الدعم بالذكاء الاصطناعي، وصاحب مشروع مدعوم.",
+    "navigation": [
+      { "id": "about", "label": "نبذة عني" },
+      { "id": "experience", "label": "الخبرات" },
+      { "id": "skills", "label": "المهارات" },
+      { "id": "projects", "label": "المشاريع" },
+      { "id": "education", "label": "التعليم" },
+      { "id": "contact", "label": "تواصل" }
+    ]
+  },
+
+  "profile": {
+    "name": "محمود عبدالوهاب",
+    "title": "Technical Support Specialist",
+    "bio": "أدعم عملاء منصات الدعم الفني وأربط WhatsApp Business API بمنتجات SaaS حقيقية، وبموازاة ذلك أبني أدوات أتمتة بالذكاء الاصطناعي — من فكرة إلى منتج قيد الاستخدام الفعلي.",
+    "avatar": "assets/images/avatar-placeholder.svg",
+    "cvUrl": "",
+    "location": "القاهرة، مصر",
+    "primaryCta": { "label": "تحميل السيرة الذاتية", "href": "", "type": "download" },
+    "secondaryCta": { "label": "تواصل معي", "href": "#contact", "type": "anchor" },
+    "highlights": [
+      { "id": "hl-1", "label": "WhatsApp Business API" },
+      { "id": "hl-2", "label": "AI Automation" },
+      { "id": "hl-3", "label": "MCP" },
+      { "id": "hl-4", "label": "SaaS Development" }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "نبذة عني",
+    "heading": "من أنا",
+    "paragraphs": [
+      "أعمل حالياً Technical Support Specialist، حيث أتعامل يومياً مع WhatsApp Business API وحلول SMS ومنصة Meta Business، وأحل مشاكل تقنية حقيقية لعملاء يعتمدون على هذه الأنظمة في عملهم.",
+      "بالتوازي مع ذلك، أبني بنفسي أدوات ومنتجات SaaS تعتمد على الذكاء الاصطناعي وبروتوكولات مثل MCP، وأربط REST APIs وSupabase لتحويل الأفكار إلى منتجات فعلية قابلة للتوسّع.",
+      "طموحي هو الانتقال التدريجي من دعم الأنظمة إلى بناء الأنظمة نفسها — منتجات SaaS ذكية تحل مشاكل فرق الدعم الفني بنفس الطريقة التي أتعامل بها مع هذه المشاكل يومياً."
+    ],
+    "focusAreas": [
+      { "id": "fa-1", "label": "WhatsApp Business API" },
+      { "id": "fa-2", "label": "SMS Solutions" },
+      { "id": "fa-3", "label": "Meta Business Platform" },
+      { "id": "fa-4", "label": "REST APIs" },
+      { "id": "fa-5", "label": "Supabase" },
+      { "id": "fa-6", "label": "AI Automation" },
+      { "id": "fa-7", "label": "MCP" },
+      { "id": "fa-8", "label": "SaaS Development" }
+    ]
+  },
+
+  "experience": {
+    "eyebrow": "المسار المهني",
+    "heading": "الخبرات",
+    "items": [
+      {
+        "id": "exp-support-specialist",
+        "role": "Technical Support Specialist",
+        "company": "",
+        "period": "أغسطس 2025 — حتى الآن",
+        "summary": "دعم فني متخصص في ربط وصيانة قنوات التواصل الآلي (WhatsApp وSMS) لعملاء يعتمدون عليها كقناة دعم أساسية، مع متابعة يومية للتكامل والأخطاء التقنية.",
+        "tags": [
+          "WhatsApp Business API",
+          "360dialog",
+          "Meta Embedded Signup",
+          "OAuth",
+          "Webhooks",
+          "API Debugging",
+          "Customer Technical Support",
+          "SMS Platforms"
+        ]
+      }
+    ]
+  },
+
+  "skills": {
+    "eyebrow": "الأدوات والتقنيات",
+    "heading": "المهارات",
+    "categories": [
+      {
+        "id": "cat-programming",
+        "label": "البرمجة",
+        "items": [
+          { "id": "sk-js", "label": "JavaScript" },
+          { "id": "sk-node", "label": "Node.js" },
+          { "id": "sk-html", "label": "HTML" },
+          { "id": "sk-css", "label": "CSS" },
+          { "id": "sk-sql", "label": "SQL" }
+        ]
+      },
+      {
+        "id": "cat-backend",
+        "label": "Backend",
+        "items": [
+          { "id": "sk-rest", "label": "REST APIs" },
+          { "id": "sk-supabase", "label": "Supabase" },
+          { "id": "sk-auth", "label": "Authentication" },
+          { "id": "sk-webhooks", "label": "Webhooks" }
+        ]
+      },
+      {
+        "id": "cat-cloud",
+        "label": "Cloud",
+        "items": [
+          { "id": "sk-cloudflare", "label": "Cloudflare" },
+          { "id": "sk-github", "label": "GitHub" },
+          { "id": "sk-vercel", "label": "Vercel" }
+        ]
+      },
+      {
+        "id": "cat-ai",
+        "label": "AI",
+        "items": [
+          { "id": "sk-mcp", "label": "MCP" },
+          { "id": "sk-agents", "label": "AI Agents" },
+          { "id": "sk-prompt", "label": "Prompt Engineering" },
+          { "id": "sk-llm", "label": "LLM Integration" },
+          { "id": "sk-ai-automation", "label": "AI Automation" }
+        ]
+      },
+      {
+        "id": "cat-support",
+        "label": "الدعم الفني",
+        "items": [
+          { "id": "sk-whatsapp", "label": "WhatsApp Business API" },
+          { "id": "sk-sms", "label": "SMS" },
+          { "id": "sk-meta", "label": "Meta Business" },
+          { "id": "sk-troubleshoot", "label": "API Troubleshooting" }
+        ]
+      }
+    ]
+  },
+
+  "projects": {
+    "eyebrow": "أعمالي",
+    "heading": "المشاريع",
+    "items": [
+      {
+        "id": "proj-mad3oom",
+        "name": "Mad3oom",
+        "period": "أكتوبر 2025 — حتى الآن",
+        "status": "قيد التطوير النشط",
+        "description": "منصة SaaS عربية لدعم العملاء، تستقبل رسائل العميل عبر واتساب أو الموقع، تجمع تفاصيل مشكلته تلقائياً، وتنظّم عمل فريق الدعم — مبنية بمعمارية معيارية قابلة للتوسّع بالكامل، ومزوّدة بخادم MCP يتيح التحكم فيها بأوامر نصية عادية.",
+        "links": { "live": "", "repo": "" },
+        "timeline": [
+          {
+            "id": "phase-1",
+            "phase": "المرحلة الأولى",
+            "title": "الأساسيات",
+            "items": ["Authentication", "User Dashboard", "Admin Dashboard", "Ticket System", "Knowledge Base"]
+          },
+          {
+            "id": "phase-2",
+            "phase": "المرحلة الثانية",
+            "title": "التكامل الخارجي",
+            "items": ["WhatsApp Integration", "Meta Embedded Signup", "API Tokens", "OAuth", "External Integrations"]
+          },
+          {
+            "id": "phase-3",
+            "phase": "المرحلة الثالثة",
+            "title": "دعم MCP",
+            "items": ["MCP Client", "MCP Server", "Remote Tools", "JSON-RPC", "AI Integrations"]
+          },
+          {
+            "id": "phase-4",
+            "phase": "المرحلة الرابعة",
+            "title": "Support Intelligence Engine (SIE)",
+            "description": "محرك ذكاء داخلي لدعم العملاء، مبني على معمارية معيارية تحلّل طلب المستخدم، تفهم السيناريو المحتمل، تستخرج الأدلة من البيانات المتاحة، ترتّب الاحتمالات حسب الأولوية، وتتخذ قراراً قبل تنفيذ الإجراء المناسب تلقائياً.",
+            "items": [
+              "Language Normalization",
+              "Scenario Engine",
+              "Diagnostic Engine",
+              "Ranking Engine",
+              "Decision Engine",
+              "Dialogue Engine",
+              "Knowledge Layer",
+              "Action Layer"
+            ]
+          }
+        ],
+        "currentFocus": [
+          "Workflow Engine",
+          "Intelligent Automation",
+          "Agent Orchestration",
+          "Omnichannel Support",
+          "AI Reasoning Improvements",
+          "Production Hardening",
+          "SaaS Scalability"
+        ],
+        "achievements": [
+          "Complete SaaS Architecture",
+          "Ticket Management System",
+          "Knowledge Base",
+          "WhatsApp Cloud API Integration",
+          "Meta Embedded Signup",
+          "API Management",
+          "MCP Server",
+          "MCP Client",
+          "Support Intelligence Engine",
+          "Modular Architecture",
+          "AI-ready Platform"
+        ]
+      }
+    ]
+  },
+
+  "education": {
+    "eyebrow": "المؤهل الدراسي",
+    "heading": "التعليم",
+    "items": [
+      {
+        "id": "edu-thebes",
+        "institute": "Thebes Academy",
+        "degree": "بكالوريوس نظم المعلومات الإدارية",
+        "period": "خريج 2022",
+        "grade": "جيد"
+      }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": "لنتواصل",
+    "heading": "تواصل معي",
+    "email": "mahmoudabdelwahabsa@gmail.com",
+    "phone": "+201274000741",
+    "location": "الجيزة، مصر",
+    "linkedin": "https://linkedin.com/in/mahmoud-abdelwahab",
+    "github": "https://github.com/mahmoud-abdelwahab"
+  }
+}

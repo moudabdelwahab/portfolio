@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Components — عناصر واجهة عامة قابلة لإعادة الاستخدام في أي قسم.
+   لا شيء هنا خاص بصفحة الإدارة (ده موجود في admin.css).
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.9rem 1.7rem; border-radius:var(--radius-sm);
+  font-weight:700; font-size:.95rem; white-space:nowrap;
+  border:1px solid transparent; position:relative; overflow:hidden;
+  transition:transform var(--dur-fast) var(--ease-snap), box-shadow var(--dur-med) var(--ease-snap), background var(--dur-fast) ease, border-color var(--dur-fast) ease;
+}
+.btn:active{ transform:translateY(1px) scale(.97); transition-duration:.08s; }
+.btn-primary{ background:linear-gradient(135deg, var(--accent), var(--primary)); color:#fff; box-shadow:0 12px 30px -10px rgba(0,119,204,.55); }
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:0 20px 40px -10px rgba(0,119,204,.75); }
+.btn-outline{ background:var(--btn-outline-bg); border-color:var(--glass-border); color:var(--text-1); }
+.btn-outline:hover{ border-color:var(--accent-soft); background:rgba(77,163,255,.08); transform:translateY(-2px); }
+.btn-danger{ background:rgba(255,107,107,.12); border-color:rgba(255,107,107,.35); color:var(--danger); }
+.btn-danger:hover{ background:rgba(255,107,107,.2); }
+.btn-sm{ padding:.55rem 1.1rem; font-size:.82rem; border-radius:var(--radius-sm); }
+.btn-icon{ padding:.55rem; border-radius:50%; }
+.btn-block{ width:100%; }
+.btn:disabled{ opacity:.5; cursor:not-allowed; transform:none !important; }
+
+/* ---------- Chips / Tags ---------- */
+.chip{
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:var(--glass-strong); border:1px solid var(--glass-border); color:var(--text-2);
+  font-size:.78rem; font-weight:600; padding:.4rem .75rem; border-radius:var(--radius-pill);
+  transition:transform var(--dur-fast) var(--ease-snap), border-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+.chip:hover{ transform:translateY(-3px); border-color:var(--accent-soft); color:var(--text-1); }
+
+/* ---------- Cards ---------- */
+.card{
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:var(--radius-lg);
+  padding:var(--space-md); transition:transform var(--dur-med) var(--ease-snap), border-color var(--dur-fast) ease, box-shadow var(--dur-med) ease;
+}
+.card:hover{ transform:translateY(-6px); border-color:rgba(77,163,255,.35); box-shadow:var(--shadow-lg); }
+
+/* ---------- Badge / Status pill ---------- */
+.badge{ display:inline-flex; align-items:center; gap:.35rem; font-size:.72rem; font-weight:700; padding:.3rem .75rem; border-radius:var(--radius-pill); }
+.badge-active{ background:rgba(34,197,138,.14); color:var(--success); }
+.badge-neutral{ background:var(--glass-strong); color:var(--text-2); }
+
+/* ---------- Avatar ---------- */
+.avatar{ border-radius:50%; overflow:hidden; background:linear-gradient(160deg, var(--accent), var(--primary-deep)); flex-shrink:0; }
+.avatar img{ width:100%; height:100%; object-fit:cover; }
+
+/* ---------- Timeline عام (يُستخدم في Experience وProjectTimeline) ---------- */
+.timeline{ position:relative; max-width:760px; }
+.timeline-track{ position:absolute; top:0; bottom:0; inset-inline-end:14px; width:2px; background:var(--glass-border); border-radius:2px; }
+.timeline-item{ position:relative; padding-inline-end:2.6rem; padding-bottom:var(--space-lg); }
+.timeline-item:last-child{ padding-bottom:0; }
+.timeline-dot{
+  position:absolute; inset-inline-end:6px; top:2px; width:18px; height:18px; border-radius:50%;
+  background:var(--bg-surface); border:2px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center; z-index:1;
+}
+.timeline-item.is-complete .timeline-dot{ border-color:var(--success); background:rgba(34,197,138,.15); }
+.timeline-item.is-active .timeline-dot{ border-color:var(--accent-soft); background:var(--primary-deep); }
+.timeline-time{ font-family:var(--font-data); font-size:.8rem; color:var(--accent-soft); font-weight:600; margin-bottom:.25rem; }
+.timeline-title{ font-size:1.05rem; margin-bottom:.35rem; }
+.timeline-desc{ color:var(--text-2); font-size:.9rem; }
+.timeline-tags{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.7rem; }
+
+/* ---------- قائمة إنجازات (Achievements) ---------- */
+.check-list{ display:grid; gap:.6rem; }
+.check-list li{ display:flex; align-items:flex-start; gap:.55rem; color:var(--text-2); font-size:.92rem; }
+.check-list svg{ width:16px; height:16px; color:var(--success); flex-shrink:0; margin-top:.2rem; }
+
+/* ---------- Form controls (تُستخدم داخل Modal التحرير) ---------- */
+.field{ display:flex; flex-direction:column; gap:.4rem; margin-bottom:var(--space-sm); }
+.field label{ font-size:.82rem; font-weight:700; color:var(--text-1); }
+.field .hint{ font-size:.75rem; color:var(--text-3); }
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="url"],
+.field textarea,
+.field select{
+  background:var(--bg-elevated); border:1px solid var(--glass-border); color:var(--text-1);
+  border-radius:var(--radius-sm); padding:.7rem .85rem; font-size:.9rem;
+  transition:border-color var(--dur-fast) ease;
+}
+.field input:focus, .field textarea:focus, .field select:focus{ border-color:var(--accent-soft); }
+.field textarea{ resize:vertical; min-height:5rem; }
+.field-image-preview{
+  width:100%; max-width:180px; aspect-ratio:1; border-radius:var(--radius-md); overflow:hidden;
+  border:1px dashed var(--glass-border); display:flex; align-items:center; justify-content:center; background:var(--bg-elevated);
+}
+.field-image-preview img{ width:100%; height:100%; object-fit:cover; }
+.field-file-btn{ display:inline-flex; }
+.field-file-btn input[type="file"]{ display:none; }
+
+/* ---------- Modal عام (ui/Modal.js) ---------- */
+.modal-overlay{
+  position:fixed; inset:0; z-index:var(--z-modal);
+  background:var(--scrim-strong); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center; padding:var(--space-sm);
+  opacity:0; transition:opacity var(--dur-med) ease;
+}
+.modal-overlay.is-open{ opacity:1; }
+.modal{
+  width:100%; max-width:560px; max-height:88vh; overflow-y:auto;
+  background:var(--bg-surface); border:1px solid var(--glass-border); border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg); padding:var(--space-md);
+  transform:translateY(16px) scale(.97); transition:transform var(--dur-med) var(--ease-bounce);
+}
+.modal-overlay.is-open .modal{ transform:translateY(0) scale(1); }
+.modal-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--space-sm); gap:var(--space-sm); }
+.modal-head h3{ font-size:1.15rem; }
+.modal-close{ width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--glass); flex-shrink:0; }
+.modal-close:hover{ background:rgba(255,107,107,.15); color:var(--danger); }
+.modal-body{ margin-bottom:var(--space-sm); }
+.modal-actions{ display:flex; justify-content:flex-end; gap:.6rem; flex-wrap:wrap; }
+.modal-actions .btn-danger{ margin-inline-end:auto; }
+
+/* ---------- Toast (ui/Toast.js) ---------- */
+.toast-stack{
+  position:fixed; bottom:var(--space-sm); inset-inline-start:var(--space-sm); z-index:var(--z-toast);
+  display:flex; flex-direction:column; gap:.5rem; max-width:min(360px, calc(100vw - 2rem));
+}
+.toast{
+  display:flex; align-items:flex-start; gap:.6rem;
+  background:var(--bg-elevated); border:1px solid var(--glass-border); border-radius:var(--radius-sm);
+  padding:.75rem .9rem; box-shadow:var(--shadow-lg); font-size:.85rem; color:var(--text-1);
+  animation:toast-in var(--dur-med) var(--ease-bounce);
+}
+.toast svg{ width:16px; height:16px; flex-shrink:0; margin-top:.15rem; }
+.toast-success svg{ color:var(--success); }
+.toast-error svg{ color:var(--danger); }
+.toast-info svg{ color:var(--accent-soft); }
+@keyframes toast-in{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:translateY(0); } }
+
+/* ---------- مقبض السحب العام (يُستخدم فقط حين يكون العنصر قابلاً لإعادة الترتيب) ---------- */
+.drag-handle{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:28px; height:28px; border-radius:var(--radius-sm); color:var(--text-3);
+  cursor:grab; touch-action:none;
+}
+.drag-handle:hover{ color:var(--text-1); background:var(--glass); }
+.drag-handle svg{ width:16px; height:16px; }
+[draggable="true"].is-dragging{ opacity:.4; }
+.drop-indicator{ height:2px; background:var(--accent); border-radius:2px; margin-block:.3rem; }

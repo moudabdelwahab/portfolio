@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Design Tokens — المصدر الوحيد للهوية البصرية.
+   أي تغيير في الألوان/الخطوط/المسافات/الظلال يتم هنا فقط، ولا يتكرر
+   في أي ملف CSS آخر.
+   ========================================================================== */
+
+:root{
+  /* ---------- الألوان الأساسية (Dark هو الافتراضي) ---------- */
+  --bg-void:#070B14;
+  --bg-surface:#0E1826;
+  --bg-elevated:#13202F;
+
+  --glass:rgba(255,255,255,.045);
+  --glass-strong:rgba(255,255,255,.075);
+  --glass-border:rgba(255,255,255,.09);
+
+  --primary:#0077CC;
+  --primary-deep:#00234A;
+  --accent:#4DA3FF;
+  --accent-soft:#8FC7FF;
+
+  --success:#22C58B;
+  --danger:#FF6B6B;
+  --warning:#F5A524;
+  --mcp:#B45FE0;
+  --mcp-soft:#D9B3F5;
+
+  --text-1:#F3F6FB;
+  --text-2:#94A6C2;
+  --text-3:#5A6A82;
+
+  --scrim:rgba(7,11,20,.8);
+  --scrim-strong:rgba(7,11,20,.97);
+  --btn-outline-bg:rgba(255,255,255,.03);
+  --dot-color:rgba(255,255,255,.05);
+
+  /* ---------- سطح المنتج (لمعاينات المشاريع الفاتحة داخل الكروت) ---------- */
+  --ui-bg:#F3F6FC;
+  --ui-card:#FFFFFF;
+  --ui-ink:#101B2E;
+  --ui-ink-2:#66738B;
+  --ui-border:#E7ECF5;
+
+  /* ---------- الطباعة ---------- */
+  --font-display:'Cairo', sans-serif;
+  --font-body:'IBM Plex Sans Arabic', sans-serif;
+  --font-data:'Space Grotesk', sans-serif;
+
+  --fs-xs:.78rem;
+  --fs-sm:.88rem;
+  --fs-base:1rem;
+  --fs-md:1.15rem;
+  --fs-lg:1.4rem;
+  --fs-xl:clamp(1.5rem, 3vw, 2rem);
+  --fs-2xl:clamp(1.9rem, 4vw, 2.7rem);
+  --fs-hero:clamp(2.1rem, 5vw, 3.4rem);
+
+  --lh-tight:1.25;
+  --lh-normal:1.6;
+  --lh-loose:1.85;
+
+  /* ---------- المسافات ---------- */
+  --space-3xs:.25rem;
+  --space-2xs:.5rem;
+  --space-xs:.75rem;
+  --space-sm:1rem;
+  --space-md:1.5rem;
+  --space-lg:2.25rem;
+  --space-xl:3.5rem;
+  --space-2xl:5.5rem;
+
+  --container-max:1180px;
+  --pad-inline:clamp(1.25rem, 4vw, 3rem);
+
+  /* ---------- الانحناءات ---------- */
+  --radius-sm:.6rem;
+  --radius-md:1rem;
+  --radius-lg:1.5rem;
+  --radius-pill:999px;
+
+  /* ---------- الظلال ---------- */
+  --shadow-sm:0 8px 20px -10px rgba(0,8,25,.5);
+  --shadow-lg:0 30px 80px -25px rgba(0,8,25,.7);
+  --shadow-glow:0 0 70px -10px rgba(0,119,204,.35);
+
+  /* ---------- الحركة ---------- */
+  --ease-snap:cubic-bezier(.2,.8,.2,1);
+  --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  --dur-fast:.18s;
+  --dur-med:.35s;
+  --dur-slow:.6s;
+
+  /* ---------- طبقات (Z-index) ---------- */
+  --z-nav:200;
+  --z-overlay:400;
+  --z-modal:500;
+  --z-toast:600;
+}
+
+/* ---------- الوضع الفاتح: يستبدل فقط الرموز التي تحتاج انعكاساً ---------- */
+[data-theme="light"]{
+  --bg-void:#F3F6FC;
+  --bg-surface:#FFFFFF;
+  --bg-elevated:#EDF2FA;
+
+  --glass:rgba(16,27,46,.035);
+  --glass-strong:rgba(16,27,46,.06);
+  --glass-border:rgba(16,27,46,.09);
+
+  --text-1:#101B2E;
+  --text-2:#4B5A72;
+  --text-3:#8493AA;
+
+  --scrim:rgba(255,255,255,.85);
+  --scrim-strong:rgba(255,255,255,.98);
+  --btn-outline-bg:rgba(16,27,46,.035);
+  --dot-color:rgba(16,27,46,.05);
+
+  --shadow-sm:0 8px 20px -10px rgba(16,27,46,.12);
+  --shadow-lg:0 30px 80px -25px rgba(16,27,46,.16);
+  --shadow-glow:0 0 70px -10px rgba(0,119,204,.22);
+}

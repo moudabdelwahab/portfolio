@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>لوحة التحكم — محمود عبدالوهاب</title>
+
+  <link rel="stylesheet" href="src/css/tokens.css" />
+  <link rel="stylesheet" href="src/css/base.css" />
+  <link rel="stylesheet" href="src/css/layout.css" />
+  <link rel="stylesheet" href="src/css/components.css" />
+  <link rel="stylesheet" href="src/css/sections.css" />
+  <!-- admin.css loads only here, never in index.html, and only adds editing chrome on top of the same tokens/components. -->
+  <link rel="stylesheet" href="src/css/admin.css" />
+</head>
+<body class="is-admin-mode">
+
+  <noscript>
+    <div class="noscript-banner">
+      <p>هذا الموقع يحتاج JavaScript ليعمل بشكل صحيح. من فضلك فعّل JavaScript في متصفحك.</p>
+    </div>
+  </noscript>
+
+  <!--
+    Fixed admin toolbar (.admin-toolbar in admin.css) is rendered by
+    AdminToolbar.js into this mount point — not hardcoded here, so its
+    autosave indicator / source badge / undo-redo state can stay driven by
+    PortfolioRepository at runtime.
+  -->
+  <div id="admin-toolbar-root"></div>
+
+  <div id="scroll-progress"></div>
+
+  <!--
+    Same Renderer, same #app mount point as index.html. The only difference
+    in admin mode is that EditingController wraps rendered sections with
+    .editable / .edit-btn affordances (see admin.css) — the Renderer and
+    section components themselves are not admin-specific.
+  -->
+  <div id="app" aria-live="polite"></div>
+
+  <div id="sprite-mount" hidden aria-hidden="true"></div>
+
+  <!--
+    Modal / Toast mount points for ui/Modal.js and ui/Toast.js, used by the
+    editing layer (field forms, delete confirmations, autosave/error toasts).
+  -->
+  <div id="modal-root"></div>
+  <div class="toast-stack" id="toast-root" aria-live="assertive"></div>
+
+  <script type="module" src="src/js/admin-app.js"></script>
+</body>
+</html>
